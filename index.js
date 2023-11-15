@@ -53,7 +53,13 @@ app.get("/", async (req, res) => {
     // Update the username in the user document
     await userRef.update({ clicked: "true" });
 
+<<<<<<< HEAD
     res.status(200).json({ success: true });
+=======
+    // Redirect to the specified URL
+    res.redirect('https://phisecurity-education.web.app/');
+    // res.status(200).json({ success: true });
+>>>>>>> 3b30d86 (second commit)
   } catch (error) {
     console.error('Error updating Firestore:', error);
     res.status(500).json({ error: 'Internal Server Error' });
